@@ -10,9 +10,31 @@
 				font-size: 18px;
 				line-height: 18px!important;
 			}
+			.card {
+				height: 420px;
+			}
+			.mdi-action-grade:before {
+			    color: #c62828;
+			}
+			.opca {
+				opacity: 0.5;
+			}
+			.card-reveal {
+				opacity: 0.7;
+			}
+			html,body {
+				font-family: '微软雅黑';
+			}
+			.mdi-action-assessment {
+				vertical-align: text-bottom;
+			}
+			h2 {
+				color: #bdbdbd
+			}
 		</style>
 	</head>
 	<body>
+		<h2><i class="mdi-action-assessment"></i>近期热映</h2>
 		<div class="container">
 			<div class="row">
 			
@@ -25,11 +47,13 @@
 			</div>
 			<div class="card-content">
 				<span class="card-title activator grey-text text-darken-4"><%= movie_name %><i class="mdi-navigation-more-vert right"></i></span>
-				<p><a href="#">This is a link</a></p>
+				<p class="grade">评分: </p>
 			</div>
 			<div class="card-reveal">
 				<span class="card-title grey-text text-darken-4"><%= movie_name %><i class="mdi-navigation-close right"></i></span>
-				<p><%= movie_starring %></p>
+				<p>导演：<%= movie_director %></p>
+				<p>主演：<%= movie_starring %></p>
+				<p>上映日期：<%= movie_release_date %></p>
 			</div>
 		</div>
 	</script>
